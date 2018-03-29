@@ -26,7 +26,5 @@ $ ./darknet detector demo cfg/coco.data cfg/yolov3.cfg yolov3.weights -c 1
 
 Video stream works fine with 1080p, has FPS = 2.9 ~ 3.2
 
-4.try tiny yolo 
-$ wget https://pjreddie.com/media/files/yolov2-tiny-voc.weights
-$ ./darknet detector demo cfg/voc.data cfg/yolov3-tiny-voc.cfg yolov3-tiny-voc.weights -c 1
+4. try tiny yolo -- not found 
 
