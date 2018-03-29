@@ -10,14 +10,18 @@ $ cd yolov3
 $ nano Makefile
 
 GPU=1
+
 CUDNN=1
+
 OPENCV=1
+
 ARCH= -gencode arch=compute_53,code=[sm_53,compute_53] \
-      -gencode arch=compute_62,code=[sm_62,compute_62]
+      -gencode arch=compute_62,code=[sm_62,compute_62]
 
 $ make
 $ wget https://pjreddie.com/media/files/yolov3.weights
 $ ./darknet detector demo cfg/coco.data cfg/yolov3.cfg yolov3.weights -c 1 
+
 (1 means webcam in /dev/video1, default camera (0) on TX2 cannot be used due to the opencv GStreamer support problem, can rebuild to make it available : https://devtalk.nvidia.com/default/topic/1020837/yolo-with-onboard-camera-pixel-format-error/?offset=12)
 
 Video stream works fine with 1080p, has FPS = 2.9 ~ 3.2
